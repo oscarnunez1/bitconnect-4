@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-winningConnect = [
+const winningConnect = [
     // hoizontal combinations
     [0, 1, 2, 3], [1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6], 
     [7, 8, 9, 10], [8, 9, 10, 11], [9, 10, 11, 12], [10, 11, 12, 13], 
@@ -29,10 +29,11 @@ winningConnect = [
     [7, 15, 23, 31], [15, 23, 31, 39], [14, 22, 30, 38]
 ]
 
+const bottomRow = [35, 36, 37, 38, 39, 40, 41 ]
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let board, currentPlayer, tie , winner
-
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -105,6 +106,7 @@ function handleClick(evt) {
     if (board[slIdx] !== null) return
     if (winner === true) return
     placePiece(slIdx)
+    piecePlacement()
     checkForTie()
     console.log("tie", tie);
     checkForWinner()
@@ -118,7 +120,6 @@ function placePiece (index) {
 
 function checkForTie() {
     if (!board.includes(null)) {
-        console.log("????");
         tie = true
     }
 }
@@ -144,6 +145,11 @@ function switchPlayerTurn() {
     }
 }
 
-function resetBoard(){
+function piecePlacement() {
+    for (let i = 0; i < board.length; i++) {
+        if (board[i + 7] === null) {
+        board[i] + 7
+    } 
 
-}
+
+}}
