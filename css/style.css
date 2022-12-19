@@ -11,13 +11,24 @@ h2 {
     text-align: center;
 }
 
-.btn {
+#container {
+    text-align: center;
+    border: 2px double black;
     display: flex;
     justify-content: center;
-    margin: 0;
-    margin-top: 10px;
-    
+    flex-wrap: wrap;
+    height: 40px;
+    padding: 5px;
+    margin-top: 15px;
+    align-items: center;
 }
+
+.btn {
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
 
 .gameboard {
     display: flex;
@@ -26,8 +37,8 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: #3b5eaf;
-    border: 5px solid navy;
-    border-radius: 10px;
+    border: 7px solid navy;
+    border-radius: 8px;
     height: 540px;
     width: 630px;
     margin: 0 auto;
