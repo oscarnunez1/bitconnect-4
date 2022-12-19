@@ -42,6 +42,8 @@ let board, currentPlayer, tie , winner
 const slotElements = document.querySelectorAll(".slot")
 console.log(slotElements);
 
+const messageElement = document.querySelector(".message")
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -50,13 +52,82 @@ slotElements.forEach(function(space) {
     space.addEventListener("click", handleClick)
 })
 
-console.log(handleClick);
+console.log(slotElements);
 
 
 /*-------------------------------- Functions --------------------------------*/
 
 loadBoard()
 
-function loadBoard() {
-    
+function loadBoard(evt) {
+    board = [null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null
+    ] 
+    currentPlayer = 1
+    winner = false
+    tie = false
+    render()
+}
+
+function render() {
+    updateBoard()
+    updateMessage()
+}
+
+function updateBoard() {
+    board.forEach(function(space, index) {
+        if (space === 1) {
+            return slotElements[index].style.backgroundColor = "red"
+        }
+
+    })
+}
+
+function updateMessage() {
+
+}
+
+function handleClick(evt) {
+    const slIdx = parseInt(evt.target.id.slice(2))
+    if (board[slIdx] !== null) return
+    if (winner === true) return
+    placePiece(slIdx)
+    checkForTie()
+    checkForWinner()
+    switchPlayerTurn()
+    render()
+}
+
+function placePiece (index) {
+    board[index] = currentPlayer
+}
+
+function checkForTie() {
+    if (!board.includes(null)) {
+        tie = true
+    }
+}
+
+function checkForWinner() {
+    winningConnect.forEach(function(connectArray) {
+        let sum = connectArray.reduce(function(prev, num) {
+            return prev + board[num]
+        }, 0)
+        if (Math.abs(sum) === 4) {
+            winner = true
+        }
+    })
+}
+
+function switchPlayerTurn() {
+    if (winner === true) {
+        return
+    } else {
+        currentPlayer = currentPlayer * -1
+    }
 }
