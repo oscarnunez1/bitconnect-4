@@ -23,7 +23,7 @@ winningConnect = [
     [5, 11, 17, 23], [11, 17, 23, 29], [17, 23, 29, 35],
     [6, 12, 18, 24], [12, 18, 24, 30], [18, 24, 30, 36],
     [13, 19, 25, 31], [19, 25, 31, 37], [20, 26, 32, 37],
-    [3, 11, 19, 27], [2, 10, 18, 26], [10, 18, 26, 34]
+    [3, 11, 19, 27], [2, 10, 18, 26], [10, 18, 26, 34],
     [1, 9, 17, 25], [9, 17, 25, 33], [17, 25, 33, 41], 
     [0, 8, 16, 24],[8, 16, 24, 32], [16, 24, 32, 40], 
     [7, 15, 23, 31], [15, 23, 31, 39], [14, 22, 30, 38]
@@ -39,11 +39,24 @@ let board, currentPlayer, tie , winner
 
 /*------------------------ Cached Element References ------------------------*/
 
+const slotElements = document.querySelectorAll(".slot")
+console.log(slotElements);
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+slotElements.forEach(function(space) {
+    space.addEventListener("click", handleClick)
+})
+
+console.log(handleClick);
 
 
 /*-------------------------------- Functions --------------------------------*/
+
+loadBoard()
+
+function loadBoard() {
+    
+}
