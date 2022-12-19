@@ -57,7 +57,7 @@ resetBtnElement.addEventListener("click", loadBoard)
 loadBoard()
 
 function loadBoard(evt) {
-    board = [null, null, null, null, null, null, null,
+    board = [
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
         null, null, null, null, null, null, null,
@@ -71,11 +71,9 @@ function loadBoard(evt) {
     render()
 }
 
-console.log(tie);
-
 function render(evt) {
-    updateBoard()
     updateMessage()
+    updateBoard()
 }
 
 function updateBoard() {
@@ -89,13 +87,15 @@ function updateBoard() {
 }
 
 function updateMessage() {
-
+    
     if(!winner && !tie){
         messageElement.innerText = `It's ${currentPlayer > 0 ? 'Red' : 'Yellow'}'s turn`
-    } else if(!winner && tie) {
-        messageElement.innerText = `Tie game`
-    } else {
+    } 
+    if (winner) {
         messageElement.innerText = `${currentPlayer > 0 ? 'Red' : 'Yellow'} wins!`
+    }
+    if (tie) {
+        messageElement.innerText = `Tie game`
     }
 }
 
