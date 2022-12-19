@@ -33,9 +33,12 @@ console.log(winningConnect);
 
 /*---------------------------- Variables (state) ----------------------------*/
 
+let board, currentPlayer, tie , winner
+
 
 
 /*------------------------ Cached Element References ------------------------*/
+
 
 
 
