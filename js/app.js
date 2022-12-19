@@ -38,11 +38,10 @@ let board, currentPlayer, tie , winner
 /*------------------------ Cached Element References ------------------------*/
 
 const slotElements = document.querySelectorAll(".slot")
-console.log(slotElements);
 
 const messageElement = document.querySelector(".message")
 
-const resetBtnElement = document.querySelector("#play-again")
+const resetBtnElement = document.querySelector("#clear-board")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -72,6 +71,8 @@ function loadBoard(evt) {
     render()
 }
 
+console.log(tie);
+
 function render(evt) {
     updateBoard()
     updateMessage()
@@ -88,6 +89,7 @@ function updateBoard() {
 }
 
 function updateMessage() {
+
     if(!winner && !tie){
         messageElement.innerText = `It's ${currentPlayer > 0 ? 'Red' : 'Yellow'}'s turn`
     } else if(!winner && tie) {
@@ -97,12 +99,14 @@ function updateMessage() {
     }
 }
 
+
 function handleClick(evt) {
     const slIdx = parseInt(evt.target.id.slice(2))
     if (board[slIdx] !== null) return
     if (winner === true) return
     placePiece(slIdx)
     checkForTie()
+    console.log("tie", tie);
     checkForWinner()
     switchPlayerTurn()
     render()
@@ -114,9 +118,11 @@ function placePiece (index) {
 
 function checkForTie() {
     if (!board.includes(null)) {
+        console.log("????");
         tie = true
     }
 }
+
 
 function checkForWinner() {
     winningConnect.forEach(function(connectArray) {
@@ -136,5 +142,8 @@ function switchPlayerTurn() {
     } else {
         currentPlayer = currentPlayer * -1
     }
-    console.log(currentPlayer);
+}
+
+function resetBoard(){
+
 }
