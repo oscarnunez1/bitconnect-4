@@ -12,7 +12,7 @@ h2 {
     text-align: center;
 }
 
-#container {
+#reset {
     text-align: center;
     border: 2px double black;
     display: flex;

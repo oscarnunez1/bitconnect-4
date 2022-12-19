@@ -29,8 +29,6 @@ winningConnect = [
     [7, 15, 23, 31], [15, 23, 31, 39], [14, 22, 30, 38]
 ]
 
-console.log(winningConnect);
-
 /*---------------------------- Variables (state) ----------------------------*/
 
 let board, currentPlayer, tie , winner
@@ -44,6 +42,7 @@ console.log(slotElements);
 
 const messageElement = document.querySelector(".message")
 
+const resetBtnElement = document.querySelector("#play-again")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -52,8 +51,7 @@ slotElements.forEach(function(space) {
     space.addEventListener("click", handleClick)
 })
 
-console.log(slotElements);
-
+resetBtnElement.addEventListener("click", loadBoard)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -74,7 +72,7 @@ function loadBoard(evt) {
     render()
 }
 
-function render() {
+function render(evt) {
     updateBoard()
     updateMessage()
 }
@@ -85,15 +83,18 @@ function updateBoard() {
             return slotElements[index].style.backgroundColor = "red"
         } else if (space === -1) {
             return slotElements[index].style.backgroundColor = "yellow"
-        } else if (space === null) {
-            return slotElements[index].style.backgroundColor = ""
         }
-
     })
 }
 
 function updateMessage() {
-
+    if(!winner && !tie){
+        messageElement.innerText = `It's ${currentPlayer > 0 ? 'Red' : 'Yellow'}'s turn`
+    } else if(!winner && tie) {
+        messageElement.innerText = `Tie game`
+    } else {
+        messageElement.innerText = `${currentPlayer > 0 ? 'Red' : 'Yellow'} wins!`
+    }
 }
 
 function handleClick(evt) {
@@ -124,6 +125,7 @@ function checkForWinner() {
         }, 0)
         if (Math.abs(sum) === 4) {
             winner = true
+            console.log("Checking for winner", winner);
         }
     })
 }
@@ -134,4 +136,5 @@ function switchPlayerTurn() {
     } else {
         currentPlayer = currentPlayer * -1
     }
+    console.log(currentPlayer);
 }
