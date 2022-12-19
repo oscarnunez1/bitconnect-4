@@ -83,6 +83,10 @@ function updateBoard() {
     board.forEach(function(space, index) {
         if (space === 1) {
             return slotElements[index].style.backgroundColor = "red"
+        } else if (space === -1) {
+            return slotElements[index].style.backgroundColor = "yellow"
+        } else if (space === null) {
+            return slotElements[index].style.backgroundColor = ""
         }
 
     })
