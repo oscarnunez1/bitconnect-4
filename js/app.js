@@ -114,7 +114,6 @@ function handleClick(evt) {
         bottomRow -= 7
     }
     board[slIdx + bottomRow] = currentPlayer
-    placePiece(slIdx)
     switchPlayerTurn()
     render()
 }
