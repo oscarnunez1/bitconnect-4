@@ -29,7 +29,7 @@ const winningConnect = [
     [7, 15, 23, 31], [15, 23, 31, 39], [14, 22, 30, 38]
 ]
 
-const bottomRow = [35, 36, 37, 38, 39, 40, 41 ]
+// const bottomRow = [35, 36, 37, 38, 39, 40, 41 ]
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -104,21 +104,22 @@ function updateMessage() {
 
 
 function handleClick(evt) {
-    const slIdx = parseInt(evt.target.id.slice(2))
+    const slIdx = parseInt(evt.target.id.replace('sl',''))
     if (board[slIdx] !== null) return
     if (winner === true) return
-    // topRowStart = 0
-    // while (board[slIdx + topRowStart] !== null) {
-    //     topRowStart += 7}
-    //     board[slIdx + topRowStart] = currentPlayer
-    placePiece(slIdx)
     checkForTie()
     checkForWinner()
+    let bottomRow = 35
+    while (board[slIdx + bottomRow] !== null) {
+        bottomRow -= 7
+    }
+    board[slIdx + bottomRow] = currentPlayer
+    placePiece(slIdx)
     switchPlayerTurn()
     render()
 }
 
-function placePiece (index) {
+function placePiece(index) {
     board[index] = currentPlayer
 }
 
