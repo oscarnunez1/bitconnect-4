@@ -80,11 +80,11 @@ function render(evt) {
 function updateBoard() {
     board.forEach(function(space, index) {
         if (space === 1) {
-            return slotElements[index].style.backgroundColor = "red"
+            slotElements[index].style.backgroundColor = "red"
         } else if (space === -1) {
-            return slotElements[index].style.backgroundColor = "yellow"
+            slotElements[index].style.backgroundColor = "yellow"
         } else {
-            return slotElements[index].style.backgroundColor = "white"
+            slotElements[index].style.backgroundColor = ""
         }
     })
 }
@@ -98,7 +98,7 @@ function updateMessage() {
         messageElement.innerText = `${currentPlayer > 0 ? 'Red' : 'Yellow'} wins!`
     }
     if (tie) {
-        messageElement.innerText = `Tie game`
+        messageElement.innerText = `Tie game! Restart?`
     }
 }
 
@@ -107,20 +107,17 @@ function handleClick(evt) {
     const slIdx = parseInt(evt.target.id.replace('sl',''))
     if (board[slIdx] !== null) return
     if (winner === true) return
-    checkForTie()
-    checkForWinner()
     let bottomRow = 35
     while (board[slIdx + bottomRow] !== null) {
         bottomRow -= 7
     }
     board[slIdx + bottomRow] = currentPlayer
+    checkForTie()
+    checkForWinner()
     switchPlayerTurn()
     render()
 }
 
-function placePiece(index) {
-    board[index] = currentPlayer
-}
 
 function checkForTie() {
     if (!board.includes(null)) {
