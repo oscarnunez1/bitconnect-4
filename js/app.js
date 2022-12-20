@@ -107,10 +107,12 @@ function handleClick(evt) {
     const slIdx = parseInt(evt.target.id.slice(2))
     if (board[slIdx] !== null) return
     if (winner === true) return
+    // topRowStart = 0
+    // while (board[slIdx + topRowStart] !== null) {
+    //     topRowStart += 7}
+    //     board[slIdx + topRowStart] = currentPlayer
     placePiece(slIdx)
-    piecePlacement()
     checkForTie()
-    console.log("tie", tie);
     checkForWinner()
     switchPlayerTurn()
     render()
@@ -146,12 +148,3 @@ function switchPlayerTurn() {
         currentPlayer = currentPlayer * -1
     }
 }
-
-function piecePlacement() {
-    for (let i = 0; i < board.length; i++) {
-        if (board[i + 7] === null) {
-        board[i] + 7
-    } 
-
-
-}}
