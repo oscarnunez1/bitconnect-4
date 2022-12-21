@@ -43,6 +43,7 @@ const messageElement = document.querySelector(".message")
 const resetBtnElement = document.querySelector("#clear-board")
 const buttonClick = new Audio('../audio/button-click.wav')
 const pieceDrop = new Audio('../audio/piece-drop.wav')
+const winnerAudio = new Audio("../audio/winning-audio.wav")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -117,7 +118,7 @@ function handleClick(evt) {
         bottomRow -= 7
     }
     board[slIdx + bottomRow] = currentPlayer
-    pieceDrop.volume = .25
+    pieceDrop.volume = .30
     pieceDrop.play()
     checkForTie()
     checkForWinner()
@@ -140,7 +141,8 @@ function checkForWinner() {
         }, 0)
         if (Math.abs(sum) === 4) {
             winner = true
-            console.log("Checking for winner", winner);
+            winnerAudio.volume = .20
+            winnerAudio.play()
         }
     })
 }

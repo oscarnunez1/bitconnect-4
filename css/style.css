@@ -8,6 +8,9 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 70px;
+    margin: 0;
+    text-shadow: 2px 2px gold;
 }
 
 h2 {
@@ -73,7 +76,14 @@ button:hover {
     box-shadow: rgb(32, 42, 68) -2px -2px 0px 2px, rgb(59, 94, 175) 0px 0px 0px 4px,
         rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
     transform: scale(1.01);
-    background-image: linear-gradient(red, #3b5eaf);
+    background-image: linear-gradient(red, #3b5eaf, gold);
     color: white;
     text-shadow: -2px 2px 0 #000;
+}
+
+span {
+    color: red;
+    font-size: 120px;
+    text-shadow: 3px 5px black;
+    text
 }
