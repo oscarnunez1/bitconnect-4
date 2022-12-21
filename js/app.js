@@ -42,6 +42,7 @@ const slotElements = document.querySelectorAll(".slot")
 const messageElement = document.querySelector(".message")
 const resetBtnElement = document.querySelector("#clear-board")
 const buttonClick = new Audio('../audio/button-click.wav')
+const pieceDrop = new Audio('../audio/piece-drop.wav')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -116,6 +117,8 @@ function handleClick(evt) {
         bottomRow -= 7
     }
     board[slIdx + bottomRow] = currentPlayer
+    pieceDrop.volume = .25
+    pieceDrop.play()
     checkForTie()
     checkForWinner()
     switchPlayerTurn()
