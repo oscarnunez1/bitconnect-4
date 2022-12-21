@@ -52,8 +52,10 @@ slotElements.forEach(function(space) {
 
 resetBtnElement.addEventListener("click", loadBoard)
 
-
-
+resetBtnElement.addEventListener("click", function(evt) {
+    buttonClick.volume = .10
+    buttonClick.play()
+})
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -146,9 +148,4 @@ function switchPlayerTurn() {
     } else {
         currentPlayer = currentPlayer * -1
     }
-}
-
-function resetBoard () {
-    buttonClick.play()
-    loadBoard()
 }
