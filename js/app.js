@@ -39,10 +39,9 @@ let board, currentPlayer, tie , winner
 /*------------------------ Cached Element References ------------------------*/
 
 const slotElements = document.querySelectorAll(".slot")
-
 const messageElement = document.querySelector(".message")
-
 const resetBtnElement = document.querySelector("#clear-board")
+const buttonClick = new Audio('../audio/button-click.wav')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -52,6 +51,9 @@ slotElements.forEach(function(space) {
 })
 
 resetBtnElement.addEventListener("click", loadBoard)
+
+
+
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -144,4 +146,9 @@ function switchPlayerTurn() {
     } else {
         currentPlayer = currentPlayer * -1
     }
+}
+
+function resetBoard () {
+    buttonClick.play()
+    loadBoard()
 }
