@@ -29,9 +29,8 @@
 ---
 
 ## Ice Box 🧊
-- [ ] Test Item
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] Classic Connect Four Theme Mode (Yellow Board, Black/Red Pieces)
+- [ ] Score Board
+- [ ] Animated Dropping Pieces
+- [ ] Hovering Pieces Over Top Row
+- [ ] Improved Font Design
