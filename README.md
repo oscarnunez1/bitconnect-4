@@ -42,6 +42,7 @@ Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 - [ ] Classic Connect Four Theme Mode (Yellow Board, Black/Red Pieces)
 - [ ] Score Board
 - [ ] Play Against Computer
+- [ ] Realistic Game Pieces
 - [ ] Animated Dropping Pieces
 - [ ] Hovering Pieces Over Top Row
 - [ ] Improved Font Design
