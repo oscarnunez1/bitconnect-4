@@ -29,8 +29,6 @@ const winningConnect = [
     [7, 15, 23, 31], [15, 23, 31, 39], [14, 22, 30, 38]
 ]
 
-// const bottomRow = [35, 36, 37, 38, 39, 40, 41 ]
-
 /*---------------------------- Variables (state) ----------------------------*/
 
 let board, currentPlayer, tie , winner
@@ -45,8 +43,6 @@ const buttonClick = new Audio('../audio/button-click.wav')
 const pieceDrop = new Audio('../audio/piece-drop.wav')
 const winnerAudio = new Audio("../audio/winning-audio.wav")
 const tieAudio = new Audio("../audio/tie-game-audio.wav")
-console.log(tieAudio);
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -104,6 +100,8 @@ function updateMessage() {
     } 
     if (winner) {
         messageElement.innerText = `${currentPlayer > 0 ? 'Red' : 'Yellow'} wins!`
+        confetti()
+        console.log(confetti);
     }
     if (tie) {
         messageElement.innerText = `Tie game! Restart?`
