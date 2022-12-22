@@ -100,8 +100,12 @@ function updateMessage() {
     } 
     if (winner) {
         messageElement.innerText = `${currentPlayer > 0 ? 'Red' : 'Yellow'} wins!`
-        confetti()
-        console.log(confetti);
+        confetti({
+            particleCount: 500,
+            spread: 720,
+            colors: ["#FF0000", "#3B5EAF", "#FFD700", "#FFCCCB", "#FFA500", "FFFFFF"],
+            scalar: 2
+        })
     }
     if (tie) {
         messageElement.innerText = `Tie game! Restart?`

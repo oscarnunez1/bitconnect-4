@@ -29,6 +29,7 @@ The audio integrated into game provides a realtic and dynamic sense of gameplay,
 * Pieces dropping audio (trimmed for gameplay) by [discokingmusic on freesound](https://freesound.org/people/discokingmusic/)
 Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 * Connect 4 favicon image originally from [Connect 4 Board by Owgun Entertainment](https://apptopia.com/google-play/app/com.owgun.connectboard/intelligence)
+* Canvas Confetti from [npm](https://www.npmjs.com/package/canvas-confetti)
 
 ---
 ## Latest Modifications - Upgrades ⏩
