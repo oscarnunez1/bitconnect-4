@@ -44,6 +44,8 @@ const resetBtnElement = document.querySelector("#clear-board")
 const buttonClick = new Audio('../audio/button-click.wav')
 const pieceDrop = new Audio('../audio/piece-drop.wav')
 const winnerAudio = new Audio("../audio/winning-audio.wav")
+const tieAudio = new Audio("../audio/tie-game-audio.wav")
+console.log(tieAudio);
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -105,6 +107,8 @@ function updateMessage() {
     }
     if (tie) {
         messageElement.innerText = `Tie game! Restart?`
+        tieAudio.volume = .20
+        tieAudio.play()
     }
 }
 
