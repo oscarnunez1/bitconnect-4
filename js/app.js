@@ -57,7 +57,7 @@ slotElements.forEach(function(space) {
 resetBtnElement.addEventListener("click", loadBoard)
 
 resetBtnElement.addEventListener("click", function(evt) {
-    buttonClick.volume = .10
+    buttonClick.volume = .30
     buttonClick.play()
 })
 
@@ -122,7 +122,7 @@ function handleClick(evt) {
         bottomRow -= 7
     }
     board[slIdx + bottomRow] = currentPlayer
-    pieceDrop.volume = .30
+    pieceDrop.volume = .35
     pieceDrop.play()
     checkForTie()
     checkForWinner()
