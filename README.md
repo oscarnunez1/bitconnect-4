@@ -31,7 +31,7 @@ Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 * Connect 4 favicon image originally from [Connect 4 Board by Owgun Entertainment](https://apptopia.com/google-play/app/com.owgun.connectboard/intelligence)
 
 ---
-## Latest Modiffications - Upgrades ⏩
+## Latest Modifications - Upgrades ⏩
 * Added an audio file thats triggered when a game is tied.
 * Colored the slot background in light gray to match the textured background.
 * Added a Connect Four favicon to match the game board.
