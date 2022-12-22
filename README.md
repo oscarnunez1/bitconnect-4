@@ -32,10 +32,10 @@ Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 
 ---
 ## Latest Modiffications - Upgrades ⏩
-* Added an audio file that is triggered when a game is tied.
-* Circlular backgrounds are now colored in light gray to match the textured background.
-* A Connect Four favicon has been added to match the game board.
-* The title styled in the classic Connect Four colorway.
+* Added an audio file thats triggered when a game is tied.
+* Colored the slot background in light gray to match the textured background.
+* Added a Connect Four favicon to match the game board.
+* Styled the title in the classic Connect Four colorway.
 
 ---
 ## Ice Box 🧊
