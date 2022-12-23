@@ -1,12 +1,12 @@
-# Connect 4
+# Bitconnect 4
 
 ![alt text](/images/connect-4-screenshot.png)
 
-*Connect 4* is a virtual remake of the original Connect Four two-player game originally launched in 1974. The game involves two players placing red or yellow pieces down 7 columns comprised of 6 slots each. With a board total of 42 slots, players need to play strategically to connect 4 pieces either vertically, horizontally, or diagonally. The first one to Connect 4 wins the game!
+*Bitconnect 4* is a bitcoin-themed remake of the original Connect Four two-player launched in 1974. The game involves two players placing yellow or red bitcoin tokens down 7 columns comprised of 6 slots each. With a board total of 42 slots, players need to play strategically to connect 4 tokens either vertically, horizontally, or diagonally. The first one to Connect 4 wins the game!
 
 The audio integrated into game provides a realistic and dynamic sense of gameplay, and the restart button is there to play as many times as you'd like. The winner gets a nice little surprise at the end!
 
-## [Play Connect 4 Here!](https://oscarnunez1-connect-4.netlify.app/) 
+## [Play Bitconnect 4 Here!](https://oscarnunez1-connect-4.netlify.app/) 
 ### [How did I get started?](https://docs.google.com/document/d/1IdEWHJSMQvPbDnjo_6TufaYbcAl6jaB7qdyPEVg3swQ/edit)
 ---
 
@@ -37,13 +37,14 @@ Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 * Colored the slot background in light gray to match the textured background.
 * Added a Connect Four favicon to match the game board.
 * Styled the title in the classic Connect Four colorway.
+* Bitcoin tokens added attributed to the title of the game.
 
 ---
 ## Ice Box 🧊
 - [ ] Classic Connect Four Theme Mode (Yellow Board, Black/Red Pieces)
 - [ ] Score Board
 - [ ] Play Against Computer
-- [ ] Realistic Game Pieces
+- [x] Realistic Game Pieces
 - [ ] Animated Dropping Pieces
 - [ ] Hovering Pieces Over Top Row
 - [ ] Improved Font Design
