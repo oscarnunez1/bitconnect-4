@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background-image:url(../images/color-wave.jpg);
+    background-image:url(../images/color-wave-high-res.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 100px;
@@ -13,7 +13,8 @@ h1 {
     font-size: 70px;
     margin: auto;
     color: white;
-    text-shadow: 1px -1px 16px white;
+    text-shadow: 1px -2px 16px #f9ad46;
+    -webkit-text-stroke: 2px black;
     border: 2px solid #e9e9e9;
     border-radius: 16px;
     width: 500px;
@@ -45,7 +46,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e9e9e9;
+    background-color: white;
     height: 70px;
     width: 70px;
     border: 5px solid #4f6af5;
@@ -55,10 +56,11 @@ h2 {
 
 button {
     border: 10px 10px;
-    box-shadow: -1px -1px 10px 5px #3b5eaf;
+    box-shadow: -1px -1px 10px 8px white;
     cursor: pointer;
-    color: #000;
-    background-color: #e9e9e9;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    background-color: transparent;
     line-height: 30px;
     border-radius: 16px;
     padding: 20px;
@@ -70,7 +72,7 @@ button:hover {
     box-shadow: rgb(32, 42, 68) -2px -2px 0px 2px, rgb(59, 94, 175) 0px 0px 0px 4px,
         rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
     transform: scale(1.01);
-    background-image: linear-gradient(red, gold);
+    background-image: linear-gradient(#da1820, #f9ad46);
     color: white;
     text-shadow: -2px 2px 8px #000;
 }
@@ -83,4 +85,9 @@ span {
 
 img {
     display: flex;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
