@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-image:url(../images/color-wave.jpg);
+    background-position: center;
+    margin-top: 400px;
 }
 
 h1 {
