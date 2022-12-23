@@ -33,7 +33,6 @@ const winningConnect = [
 
 let board, currentPlayer, tie , winner
 
-
 /*------------------------ Cached Element References ------------------------*/
 
 const slotElements = document.querySelectorAll(".slot")
