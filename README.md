@@ -1,6 +1,6 @@
 # Bitconnect 4
 
-![alt text](/images/connect-4-screenshot.png)
+![alt text](/images/bitconnect-4.png)
 
 *Bitconnect 4* is a bitcoin-themed remake of the original Connect Four two-player launched in 1974. The game involves two players placing yellow or red bitcoin tokens down 7 columns comprised of 6 slots each. With a board total of 42 slots, players need to play strategically to connect 4 tokens either vertically, horizontally, or diagonally. The first one to Connect 4 wins the game!
 
