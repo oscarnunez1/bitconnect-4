@@ -84,11 +84,11 @@ function render(evt) {
 function updateBoard() {
     board.forEach(function(space, index) {
         if (space === 1) {
-            slotElements[index].style.backgroundColor = "red"
+            slotElements[index].innerHTML = '<img src="images/red-bitcoin.png">'
         } else if (space === -1) {
-            slotElements[index].style.backgroundColor = "yellow"
+            slotElements[index].innerHTML = '<img src="images/yellow-bitcoin.png">'
         } else {
-            slotElements[index].style.backgroundColor = ""
+            slotElements[index].innerHTML = ' '
         }
     })
 }
