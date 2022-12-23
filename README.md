@@ -6,7 +6,7 @@
 
 The audio integrated into game provides a realistic and dynamic sense of gameplay, and the restart button is there to play as many times as you'd like. The winner gets a nice little surprise at the end!
 
-## [Play Bitconnect 4 Here!](https://oscarnunez1-connect-4.netlify.app/) 
+## [Play Bitconnect 4 Here!](https://oscarnunez1-bitconnect-4.netlify.app/) 
 ### [How did I get started?](https://docs.google.com/document/d/1IdEWHJSMQvPbDnjo_6TufaYbcAl6jaB7qdyPEVg3swQ/edit)
 ---
 
