@@ -103,7 +103,7 @@ function updateMessage() {
             particleCount: 500,
             spread: 720,
             colors: ["#FF0000", "#3B5EAF", "#FFD700", "#FFCCCB", "#FFA500", "FFFFFF"],
-            scalar: 2
+            scalar: 3
         })
     }
     if (tie) {
