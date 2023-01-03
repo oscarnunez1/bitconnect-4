@@ -33,7 +33,7 @@ Tie game audio from [mixkit](https://mixkit.co/free-sound-effects/game/)
 
 ---
 ## Latest Modifications - Upgrades ⏩
-* Added an audio file thats triggered when a game is tied.
+* Added an audio file that's triggered when a game is tied.
 * Added a Connect Four favicon to match the game board.
 * Bitcoin tokens added attributed to the title of the game.
 * Artistic background added for a better visual experience. 
